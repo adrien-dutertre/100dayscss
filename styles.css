@@ -1264,3 +1264,101 @@ body {
         transform: translate(0px, -25px);
     }
 }
+
+/*--- DAY 012 ---*/
+#day012 {
+    background-color: #4DB6DE;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#day012 blockquote {
+    font-size: 2em;
+    position: relative;
+}
+
+#day012 blockquote::before {
+    content: '"';
+    font-size: 7em;
+    position:absolute;
+    left: -0.15em;
+    top: -0.3em;
+    opacity: 0.35;
+}
+
+#day012 .conteneur {
+    display: inline;
+    position: relative;
+}
+
+#day012 .surlignage {
+    background-color: #276F8A;
+    padding-inline: 0.2em;
+    display: inline;
+}
+
+#day012 .surlignage:hover {
+    cursor: pointer;
+}
+
+#day012 .conteneur:hover>.definition {
+    visibility: visible;
+    opacity: 1;
+    top: -112px;
+}
+
+#day012 .prononciation {
+    color: #276F8A;
+    background-color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+#day012 .texte {
+    background-color: #276F8A;
+    color: white;
+    padding: 8px;
+}
+
+#day012 .definition {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    font-size: small;
+    top: -132px;
+    left: -50px;
+    width: 250px;
+    transition: opacity 0.4s linear, top 0.4s linear;
+}
+
+#day012 .definition::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-color: #276F8A transparent transparent transparent;
+    border-width: 8px 8px 0 8px;
+    bottom: -8px;
+    left: 117px;
+}
+
+#day012 .ecoute {
+    font-size: 20px;
+    color: #276F8A;
+    margin-inline: 8px;
+}
+
+#day012 .ecoute:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#day012 .auteur {
+    margin-inline-start: 40px;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 300;
+}
