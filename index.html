@@ -459,6 +459,69 @@
                 </blockquote>
                 <p class="auteur">Albert Einstein</p>
              </article>
+
+             <!-- DAY 013 -->
+             <article id="day013" class="day">
+                <div class="liste-profils">
+                    <div class="profil">
+                        <img src="/ressources/photo1.jpg" class="photo-profil" alt="portrait de belle femme">
+                        <button class="btn btn-detail" onclick="afficherProfil()">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span></button>
+                    </div>
+                    <div class="profil">
+                        <img src="/ressources/photo2.jpg" class="photo-profil" alt="portrait de belle femme">
+                        <button class="btn btn-detail" onclick="afficherProfil()">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span></button>
+                    </div>
+                    <div class="profil">
+                        <img src="/ressources/photo3.jpg" class="photo-profil" alt="portrait de belle femme">
+                        <button class="btn btn-detail" onclick="afficherProfil()">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span></button>
+                    </div>
+                    <div class="profil">
+                        <img src="/ressources/photo4.jpg" class="photo-profil" alt="portrait de belle femme">
+                        <button class="btn btn-detail" onclick="afficherProfil()">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span></button>
+                    </div>
+                </div>
+                <div id="overlay">
+                    <button class="btn btn-fermer" onclick="masqueProfil()">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </button>
+                    <img src="/ressources/background.jpg" alt="montagnes enneigées" class="image-fond">
+                    <div class="infos-profil">
+                        <img src="/ressources/photo1.jpg" class="photo-detail" alt="portrait de belle femme">
+                        <h1>Natalie Portman</h1>
+                        <div class="interactions">
+                            <button class="btn-contact">
+                                <span class="material-symbols-outlined">
+                                    call
+                                </span>
+                            </button>
+                            <button class="btn-contact">
+                                <span class="material-symbols-outlined">
+                                    forum
+                                </span>
+                            </button>
+                            <button class="btn-contact">
+                                <span class="material-symbols-outlined">
+                                    favorite
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
     </body>
     <script>
@@ -474,6 +537,17 @@
         const searchBar = document.getElementById("d007-searchbar");
         function d007Recherche() {
             searchBar.classList.toggle("ouvert");
+        }
+        //-------
+
+        //DAY 013
+        const detailProfil = document.getElementById("overlay");
+        function afficherProfil() {
+            detailProfil.classList.add("actif");
+        }
+
+        function masqueProfil() {
+            detailProfil.classList.remove("actif");
         }
         //-------
     </script>
