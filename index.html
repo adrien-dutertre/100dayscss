@@ -492,7 +492,7 @@
                             </span></button>
                     </div>
                 </div>
-                <div id="overlay">
+                <div class="overlay">
                     <button class="btn btn-fermer" onclick="masqueProfil()">
                         <span class="material-symbols-outlined">
                             close
@@ -541,13 +541,13 @@
         //-------
 
         //DAY 013
-        const detailProfil = document.getElementById("overlay");
+        const detailProfil = document.getElementsByClassName("overlay");
         function afficherProfil() {
-            detailProfil.classList.add("actif");
+            detailProfil[0].classList.add("actif");
         }
 
         function masqueProfil() {
-            detailProfil.classList.remove("actif");
+            detailProfil[0].classList.remove("actif");
         }
         //-------
     </script>
