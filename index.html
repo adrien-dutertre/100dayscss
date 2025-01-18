@@ -594,6 +594,21 @@
                 <p class="skipped">Skipped</p>
                 <div></div>
              </article>
+
+             <!-- DAY 019 -->
+             <article id="day019" class="day flex-center">
+                <div class="fonds">
+                    <div id="fond1"></div>
+                    <div id="fond2"></div>
+                    <div id="fond3"></div>
+                </div>
+                <div class="commandes">
+                    <div class="commande"></div>
+                    <div class="commande"></div>
+                    <div class="commande actif"></div>
+                    <div id="selecteur"></div>
+                </div>
+             </article>
         </section>
     </body>
     <script>
@@ -655,6 +670,25 @@
                     fichierCharge = true;
                 }, 5000);
             }
+        });
+        //-------
+
+        //DAY 019
+        const commandes = document.getElementsByClassName("commande");
+        commandes[0].addEventListener("click", () => {
+            commandes[0].classList.add("actif");
+            commandes[1].classList.remove("actif");
+            commandes[2].classList.remove("actif");
+        });
+        commandes[1].addEventListener("click", () => {
+            commandes[1].classList.add("actif");
+            commandes[0].classList.remove("actif");
+            commandes[2].classList.remove("actif");
+        });
+        commandes[2].addEventListener("click", () => {
+            commandes[2].classList.add("actif");
+            commandes[1].classList.remove("actif");
+            commandes[0].classList.remove("actif");
         });
         //-------
     </script>

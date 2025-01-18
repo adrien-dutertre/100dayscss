@@ -1819,3 +1819,83 @@ body {
     position: absolute;
     bottom: 0;
 }
+
+/*--- DAY 019 ---*/
+#day019 {
+    position: relative;
+}
+
+.fonds {
+    display: flex;
+    position: absolute;
+    width: 1200px;
+    height: 400px;
+    left: 0;
+    transition: all ease-in-out 400ms;
+}
+
+.fonds div {
+    width: 400px;
+    height: 400px;
+}
+
+#fond1 {
+    background-color: #9B59B6;
+}
+
+#fond2 {
+    background-color: #3398DB;
+}
+
+#fond3 {
+    background-color: #19BC9C;
+}
+
+.commandes {
+    display: flex;
+    gap: 8px;
+    position: relative;
+}
+
+#selecteur {
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    transition: all ease-in-out 100ms;
+}
+
+.commandes .commande {
+    width: 56px;
+    height: 56px;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.commandes .commande:nth-child(1).actif ~ #selecteur {
+    transform: translateX(0px);
+}
+
+.commandes .commande:nth-child(2).actif ~ #selecteur {
+    transform: translateX(68px);
+}
+
+.commandes .commande:nth-child(3).actif ~ #selecteur {
+    transform: translateX(136px);
+}
+
+article:has(.commandes .commande:nth-child(1).actif) .fonds {
+    transform: translateX(0px);
+}
+
+article:has(.commandes .commande:nth-child(2).actif) .fonds {
+    transform: translateX(-400px);
+}
+
+article:has(.commandes .commande:nth-child(3).actif) .fonds {
+    transform: translateX(-800px);
+}
