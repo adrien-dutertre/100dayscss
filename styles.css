@@ -1772,3 +1772,50 @@ body {
     margin-bottom: 24px;
     cursor: pointer;
 }
+
+/*--- DAY 016 ---*/
+#day016 {
+    background-color: #45A6DA;
+}
+
+#day016 div {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.skipped {
+    font-size: xx-large;
+    text-transform: uppercase;
+    color: red;
+    position: absolute;
+}
+
+/*--- DAY 017 ---*/
+#day017 {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23353535' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+#day017 div {
+    width: 250px;
+    height: 250px;
+    background-color: #353535;
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+                0 5px 22px 4px rgba(0, 0, 0, 0.12), 
+                0 7px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*--- DAY 018 ---*/
+#day018 {
+    background-color: #444444;
+    position: relative;
+}
+
+#day018 div {
+    background-color: #35D493;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+}
