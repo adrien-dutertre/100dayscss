@@ -561,6 +561,21 @@
                     
                 </div>
              </article>
+
+             <!-- DAY 015 -->
+             <article id="day015" class="day">
+                <div class="conteneur">
+                    <p>Insérer un fichier pour téléchargement</p>
+                    <progress max="100" value="0"></progress>
+                    <div id="dropzone">
+                        <span id="icone-upload" class="material-symbols-outlined">cloud_upload</span>
+                        <span id="icone-sync" class="material-symbols-outlined rotation">sync</span>
+                        <span id="icone-check" class="material-symbols-outlined">check</span>
+                        <input id="input-fichier" type="file"></input>
+                    </div>
+                    <button id="btn-telecharger">Télécharger</button>
+                </div>
+             </article>
         </section>
     </body>
     <script>
@@ -588,6 +603,41 @@
         function masqueProfil() {
             detailProfil[0].classList.remove("actif");
         }
+        //-------
+
+        //DAY 015
+        let fichierCharge = false;
+        const dropzone = document.getElementById('dropzone');
+        const barreChargement = document.getElementsByTagName("progress");
+        let interval;
+        const iconeUpload = document.getElementById('icone-upload');
+        iconeUpload.style.opacity = 1;
+        const iconeSync = document.getElementById('icone-sync');
+        const iconeCheck = document.getElementById('icone-check');
+        const inputFichier = document.getElementById('input-fichier');
+        inputFichier.onchange = () => {
+            inputFichier.style.opacity = 1;
+            iconeUpload.style.opacity = 0;
+        };
+        const btnTelecharger = document.getElementById('btn-telecharger');
+        btnTelecharger.addEventListener('click',() => {
+            if (inputFichier.files[0] && !fichierCharge) {
+                dropzone.style.borderColor = "transparent";
+                iconeSync.style.opacity = 1;
+                inputFichier.style.opacity = 0;
+                btnTelecharger.innerText = "Chargement en cours...";
+                interval = setInterval(() => {
+                    barreChargement[0].value += 1;
+                }, 50);
+                setTimeout(() => {
+                    clearInterval(interval);
+                    iconeSync.style.opacity = 0;
+                    iconeCheck.style.opacity = 1;
+                    btnTelecharger.innerText = "Chargé !";
+                    fichierCharge = true;
+                }, 5000);
+            }
+        });
         //-------
     </script>
 </html>

@@ -5,6 +5,8 @@
     --day013-couleur: #EC6565;
     --day014-couleur-dark: #4B4841;
     --day014-couleur-light: #FFCE4E;
+    --day015-couleur-light: #6ECE3B;
+    --day015-couleur-dark: #498C25;
 }
 
 body {
@@ -1676,4 +1678,97 @@ body {
 
 .carte #helicopter {
     transform: rotateX(180deg);
+}
+
+/*--- DAY 015 ---*/
+#day015 {
+    background-image: linear-gradient(to top right, #3A92AE, #5CA05B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#day015 .conteneur {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+                0 5px 22px 4px rgba(0, 0, 0, 0.12), 
+                0 7px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#day015 p {
+    color: #686868;
+}
+
+#day015 progress {
+    width: 100%;
+    border: none;
+    height: 4px;
+}
+
+#day015 progress[value="0"] {
+    height: 1px;
+}
+
+#day015 progress::-webkit-progress-bar {
+    background-color: #b1b1b1;
+}
+
+#day015 progress::-webkit-progress-value {
+    background-color: var(--day015-couleur-light);
+}
+
+#dropzone {
+    margin: 32px 0;
+    width: 100px;
+    height: 80px;
+    border: 1px dashed #b1b1b1;
+    position: relative;
+}
+
+#day015 span {
+    opacity: 0;
+    position: absolute;
+    color: #b1b1b1;
+    left: 38px;
+    top: 28px;
+    transition: opacity ease-in-out;
+}
+
+#day015 span.rotation {
+    animation: rotation 3s linear 400ms infinite forwards;
+}
+
+@keyframes rotation {
+    to {
+        transform: rotateZ(-360deg);
+    }
+}
+
+#day015 input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#day015 input[type="file"]::file-selector-button{
+    display: none;
+}
+
+#day015 button {
+    font-size: medium;
+    color: white;
+    background-color: var(--day015-couleur-light);
+    width: 150px;
+    height: 48px;
+    border: none;
+    border-bottom: 2px solid var(--day015-couleur-dark);
+    border-radius: 2px;
+    margin-bottom: 24px;
+    cursor: pointer;
 }
